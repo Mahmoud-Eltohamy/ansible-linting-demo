@@ -1,0 +1,13 @@
+- name: My-Role | Update and upgrade yum packages
+  yum:
+    name: "*"
+    update_cache: yes
+    state: latest
+
+- name: My-Role | Install additional packages
+  yum:
+    name: "{{ installed_packages }}"
+    state: latest
+  vars:
+    installed_packages:
+      - nginx 
