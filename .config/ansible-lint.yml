@@ -1,5 +1,6 @@
 skip_list:
   - yaml[truthy]  # Violations reported by yamllint.
+  - name[casing]  # Rule for checking task and play names.
 
 warn_list:
   - fqcn-builtins  # Use FQCN for builtin actions.
