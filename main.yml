@@ -16,4 +16,4 @@
         state: latest
       vars:
         installed_packages:
-          - nginx
+          - unzip
