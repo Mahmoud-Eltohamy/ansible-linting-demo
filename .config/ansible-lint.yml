@@ -1,1 +1,6 @@
+skip_list:
+  - yaml[truthy]  # Violations reported by yamllint.
 
+warn_list:
+  - fqcn-builtins  # Use FQCN for builtin actions.
+  - package-latest  # Package installs should not use latest.
