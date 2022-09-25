@@ -1,1 +1,14 @@
 
+---
+- name: tests
+  hosts: localhost
+  become: no
+  gather_facts: no
+  tasks:
+    - name: "prepare facts"
+      package_facts:
+        manager: "auto"
+
+    - name: confirm unzip is installed
+      assert:
+        that: "'unzip' in ansible_facts.packages"
