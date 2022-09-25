@@ -1,7 +1,7 @@
 - name: My-Role | Update and upgrade yum packages
   yum:
     name: "*"
-    update_cache: yes
+    update_cache: true
     state: latest
 
 - name: My-Role | Install additional packages
@@ -10,4 +10,4 @@
     state: latest
   vars:
     installed_packages:
-      - nginx 
+      - nginx
