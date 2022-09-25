@@ -34,4 +34,4 @@ if __name__ == "__main__":
     print(dataframe['description'].value_counts())
     dataframe.rename(columns = {'location.path':'file path', 'location.lines.begin':'position', 'content.body':'body'}, inplace = True)
     html = generate_html(dataframe)
-    open("index.html", "w").write(html)
+    open("linting_report.html", "w").write(html)
