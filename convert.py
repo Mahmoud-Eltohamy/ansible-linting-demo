@@ -27,7 +27,7 @@ def generate_html(dataframe: pd.DataFrame):
     return html
 
 if __name__ == "__main__":
-    dataframe = pd.json_normalize(json.load(open('_src/result.json')), max_level=3)
+    dataframe = pd.json_normalize(json.load(open('result.json')), max_level=3)
     dataframe = dataframe.drop(columns=['fingerprint'])
     dataframe = dataframe.replace(r'\r+|\n+|\t+', "", regex=True) 
     #print(dataframe['severity'].value_counts())
