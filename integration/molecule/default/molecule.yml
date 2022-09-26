@@ -2,14 +2,10 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
+  name: podman
 platforms:
   - name: instance
-    image: geerlingguy/docker-${MOLECULE_DISTRO:-centos8}-ansible:latest
+    image: redhat/ubi8
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
